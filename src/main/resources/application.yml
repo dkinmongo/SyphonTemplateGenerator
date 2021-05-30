@@ -10,5 +10,5 @@ logging:
     sun.rmi: error
     org.mongodb: info
     org.springframework: info
-    com.mongodb.migtool: debug
+    com.mongodb.autotemplate: debug
     com.zaxxer.hikari: off

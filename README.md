@@ -3,50 +3,36 @@
 ## Introduction
 mongosyphon is a migration tool(https://github.com/johnlpage/MongoSyphon).
 In order to migrate data from source(oracle, mysql and other databases) to target(mostly mongodb), we need to define the table layout.
-This java code will generate the template 
-```console
+This java code will generate the sample templates
 
+i.e.) species.json
+```javascript
+{
+  "start": {
+    "source": {
+      "uri": "jdbc:mysql://localhost:3306/sdemo?useSSL=false",
+      "user": "root",
+      "password": "manager"
+    },
+    "target": {
+      "mode": "insert",
+      "uri": "mongodb://mongoadmin:passwordone@localhost:30000,localhost:30001,localhost:30002/",
+      "namespace": "test.species"
+    },
+    "template": {
+      "speciesid": "$speciesid",
+      "species": "$species"
+    },
+    "query": {
+      "sql": "SELECT * FROM species"
+    }
+  }
+}
 ```
-
-## Dependencies
-Package Name|Version
------|-----
-spring-boot-starter|2.2.9.BUILD-SNAPSHOT
-mongodb-driver|3.11.2
-lombok|1.18.12
-logback-classic:1.2.3
 
 ## Run
-
-### Create MongoDB Collection on ReplicaSet
-
-```javascript
-use plm
-db.createCollection("trends")
-db.createCollection("defects")
-
-db.getSiblingDB("plm").runCommand(
-  {
-    createIndexes: "trends",
-    indexes:[
-        {
-            key: {
-                'taskId':1,
-                'updateDate':-1,
-                'devModelCode':1,
-                'verifier':1,
-                'status':1
-            },
-            name:"c_idx_trends_01"
-        }
-    ]
-  }
-);
-
-```
-
 ```console
 mvn package
 mvn compile package
-java -jar target/
+java -jar target/syphonTemplate-0.0.1-SNAPSHOT.jar
 ```

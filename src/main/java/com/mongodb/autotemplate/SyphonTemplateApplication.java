@@ -102,7 +102,7 @@ public class SyphonTemplateApplication {
 		} catch(Exception e){
 			System.out.println("Exception due to " + e);
 		}
-		System.out.println("conn: " + conn);
+		//System.out.println("conn: " + conn);
 	}
 
 	public static void initialize_oracle(){

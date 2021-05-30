@@ -9,7 +9,7 @@
 		<relativePath/>
 	</parent>
 	<groupId>com.mongodb</groupId>
-	<artifactId>migtool</artifactId>
+	<artifactId>syphonTemplate</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SyphonTemplate</name>
 	<description>SyphonTemplate</description>
@@ -116,7 +116,7 @@
 						</goals>
 						<configuration>
 							<classifier>spring-boot</classifier>
-							<mainClass>com.mongodb.migtool.MigrationToolApplication</mainClass>
+							<mainClass>com.mongodb.autotemplate.syphonTemplateApplication</mainClass>
 						</configuration>
 					</execution>
 				</executions>
