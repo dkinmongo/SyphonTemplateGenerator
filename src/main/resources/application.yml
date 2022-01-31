@@ -1,8 +1,24 @@
-#spring:
-#  data:
-#    mongodb:
-#      uri: mongodb://admin:admin@localhost:27017,localhost:27018,localhost:27019/test?authSource=admin&replicaSet=replset
-#      database: test
+#source:
+#  dbms: oracle
+#  uri: jdbc:oracle:thin:@localhost:1521/orclpdb1.localdomain
+#  username: test
+#  passwd: test
+#  owner: ats
+#  tablename: t_part_rim, t_part_consensus
+
+source:
+  dbms: mysql
+  uri: jdbc:mysql://207.180.195.131:3306/ats?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Seoul
+  username: ats
+  passwd: Rlaehdrbs1
+  dbname: ats
+  tablename: code_name,dk_tables,quant_tables,rank_self,result_2019q3,t_adr,t_cost,t_credit,t_jisu,t_jisu_korea,t_kospi,t_krx_administrative,t_pbr,t_pcr,t_per,t_perf_trend,t_psr,t_rim,t_roe,t_sise,table_qtrend,tableq1,tableq10,tableq11,tableq12,tableq2,tableq3,tableq4,tableq5,tableq6,tableq6new,tableq7,tableq8,tableq9,tableqadr,tableqtrend,tb_accnt,tb_accnt_info,tb_chegyul_lst,tb_ord_list,tb_trd_jongmok,user,user_roles
+
+target:
+  dbms: MongoDB
+  uri: mongodb://localhost:30000,localhost:30001,localhost:30002/test?replicaSet=rs0
+  dbname: test
+
 ---
 logging:
   level:
