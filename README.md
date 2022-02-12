@@ -50,7 +50,7 @@ source:
 
 target:
   dbms: MongoDB
-  uri: mongodb://user:password@localhost:30000,localhost:30001,localhost:30002/test?replicaSet=rs0
+  uri: mongodb://user:password@localhost:30000,localhost:30001,localhost:30002/test?authSource=admin&replicaSet=myRS
   dbname: test
 
 ---
