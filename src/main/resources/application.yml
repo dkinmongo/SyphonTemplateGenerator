@@ -8,15 +8,15 @@
 
 source:
   dbms: mysql
-  uri: jdbc:mysql://207.180.195.131:3306/ats?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Seoul
-  username: user
-  passwd: password
-  dbname: dbname
-  tablename: table1,table2,table3
-  
+  uri: jdbc:mysql://127.0.0.1:3306/test?allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=Asia/Seoul
+  username: test
+  passwd: test
+  dbname: test
+  tablename: table1, table2, table3, table4
+
 target:
   dbms: MongoDB
-  uri: mongodb://user:password@localhost:30000,localhost:30001,localhost:30002/test?replicaSet=rs0
+  uri: mongodb://user:password@localhost:30000,localhost:30001,localhost:30002/test?authSource=admin&replicaSet=myRS
   dbname: test
 
 ---
