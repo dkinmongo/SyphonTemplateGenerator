@@ -102,6 +102,6 @@ done
 ```
 for cur in `ls *.json`
 do
-  nohup java -jar ./MongoSyphon/bin/MongoSyphon.jar -c $cur &
+  nohup java -jar ~/MongoSyphon/bin/MongoSyphon.jar -c $cur &
 done
 ```
