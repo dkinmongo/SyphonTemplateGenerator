@@ -16,7 +16,7 @@ i.e.) species.json
     },
     "target": {
       "mode": "insert",
-      "uri": "mongodb://mongoadmin:passwordone@localhost:30000,localhost:30001,localhost:30002/",
+      "uri": "mongodb://mongoadmin:passwordone@localhost:30000,localhost:30001,localhost:30002/test?authSource=admin&replicaSet=myRS",
       "namespace": "test.species"
     },
     "template": {
