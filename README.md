@@ -38,7 +38,7 @@ i.e.) species.json
 #  username: test
 #  passwd: test
 #  owner: sqladm
-#  tablename: table1, table2
+#  tablename: table1,table2
 
 source:
   dbms: mysql
@@ -46,7 +46,7 @@ source:
   username: test
   passwd: test
   dbname: test
-  tablename: table1, table2, table3, table4
+  tablename: table1,table2,table3,table4
 
 target:
   dbms: MongoDB
