@@ -66,8 +66,7 @@ logging:
 
 ## Run
 ```console
-mvn package
-mvn compile package
+mvn clean package
 java -jar target/syphonTemplate-0.0.1-SNAPSHOT.jar
 ```
 ## output : save them into filename (list)
